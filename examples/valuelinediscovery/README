@@ -15,5 +15,5 @@ Run Instructions (Linux)
 
 Terminal #1: openocd 
 
-Terminal #2: cargo run --example
+Terminal #2: cargo run
 

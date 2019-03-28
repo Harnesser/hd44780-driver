@@ -74,6 +74,9 @@ fn main() -> ! {
     let b6 = gpioc.pc2.into_push_pull_output(&mut gpioc.crl);
     let b7 = gpioc.pc3.into_push_pull_output(&mut gpioc.crl);
 
+    // Write. Always.
+    let rw = gpioc.pc4.into_push_pull_output(&mut gpioc.crl).set_low();
+
     let mut lcd = HD44780::new_4bit(rs, en, b4, b5, b6, b7, delay);
     lcd.reset();
     lcd.clear();
