@@ -1,7 +1,7 @@
 [package]
 authors = ["Robin Krahl <robin.krahl@ireas.org>"]
 edition = "2018"
-name = "stm32f30x-hd44780-example"
+name = "vldiscoveryt-hd44780-example"
 version = "0.1.0"
 license = "MIT"
 publish = false
@@ -13,11 +13,16 @@ embedded-hal = "0.2.2"
 panic-halt = "0.2.0"
 hd44780-driver = { path = "../.." }
 
-[dependencies.hal]
-version = "0.2.0"
-package = "stm32f30x-hal"
+[dependencies.stm32f1xx-hal]
+features = ["stm32f100", "rt"]
+version = "0.2.1"
 
 [profile.release]
 codegen-units = 1
 debug = true
 lto = true
+
+## Dev - need all GPIOC pins exposed
+[patch.crates-io]
+stm32f1xx-hal = { git = 'https://github.com/stm32-rs/stm32f1xx-hal' }
+#stm32f1xx-hal = { path = 'home/harnesser/Github/stm32f1xx-hal' }

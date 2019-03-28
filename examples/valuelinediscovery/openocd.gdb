@@ -1,5 +1,9 @@
 target extended-remote :3333
 
+# magic from the internet
+# http://openocd.org/doc/html/GDB-and-OpenOCD.html
+monitor reset halt
+
 # print demangled symbols
 set print asm-demangle on
 

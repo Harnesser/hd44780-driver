@@ -1,3 +1,19 @@
-This example is based on the cortex-m-quickstart project avaiable at
+Example to run LCD from Valuelinediscovery board
+-------------------------------------------------
+
+* [STM32VLDISCOVERY|https://www.st.com/en/evaluation-tools/stm32vldiscovery.html] 
+* [STM32F100|https://www.st.com/en/microcontrollers-microprocessors/stm32f100rb.html]
+
+This example is based on the `stm43f30x` example, which in turn is
+based on the cortex-m-quickstart project avaiable at
 https://github.com/rust-embedded/cortex-m-quickstart under the MIT License or
 the Apache License, Version 2.0.
+
+
+Run Instructions (Linux)
+-----------------------------------------------
+
+Terminal #1: openocd 
+
+Terminal #2: cargo run --example
+
